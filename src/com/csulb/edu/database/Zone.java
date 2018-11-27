@@ -64,7 +64,6 @@ public class Zone implements DBObject {
             polygon+=p.getLatitude();
                 polygon+=",";
             values.add(p.getLatitude());
-           // bytes.add(p.getLongitude().);
         }
 
         polygon+=polygonVertices.get(0).getLongitude();
