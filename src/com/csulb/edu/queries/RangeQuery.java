@@ -58,8 +58,10 @@ public class RangeQuery implements Query {
         poly += " ";
         poly += polygon.get(0).getLatitude();
 
+
         stmt = connection.prepareStatement("select incident_id, ST_AsWKT(incident_location) ,incident_type " +
-                "from Incidents where ST_CONTAINS(ST_GeomFromText('" + poly + "))'),incident_location)");
+                "from Incidents where ST_CONTAINS(ST_GeomFromText('" + poly + "))'),incident_location)" +
+                "order by incident_id");
 
 
         //System.out.println(stmt.toString());

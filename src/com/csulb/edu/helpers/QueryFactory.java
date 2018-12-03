@@ -1,8 +1,7 @@
 package com.csulb.edu.helpers;
 
 import com.csulb.edu.database.*;
-import com.csulb.edu.queries.Query;
-import com.csulb.edu.queries.RangeQuery;
+import com.csulb.edu.queries.*;
 
 public class QueryFactory {
 
@@ -14,6 +13,16 @@ public class QueryFactory {
 
         if(type.equalsIgnoreCase("q1"))
             return new RangeQuery();
+
+
+        if(type.equalsIgnoreCase("q2"))
+            return new PointQuery();
+
+        if(type.equalsIgnoreCase("q3"))
+            return new FindSquadQuery();
+
+        if(type.equalsIgnoreCase("q4"))
+            return new RouteCoverage();
 
 
 
